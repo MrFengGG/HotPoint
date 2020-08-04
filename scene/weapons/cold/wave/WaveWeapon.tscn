@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/weapons/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assert/wave.png" type="Texture" id=2]
+[ext_resource path="res://scene/weapons/cold/wave/WaveWeapon.gd" type="Script" id=3]
+[ext_resource path="res://assert/wave.wav" type="AudioStream" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Wave"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pviot:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 318.0, 136.0 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "show"
+}, {
+"args": [  ],
+"method": "hide"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Pviot/AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+
+[node name="WaveWeapon" instance=ExtResource( 1 )]
+scale = Vector2( 1, -1 )
+script = ExtResource( 3 )
+attackTime = 0.5
+triggerType = 0
+speed = 2.0
+
+[node name="Pviot" parent="." index="0"]
+position = Vector2( 25.6664, -0.853104 )
+rotation = 5.55015
+
+[node name="Sprite" parent="Pviot" index="0"]
+position = Vector2( -12.9229, 11.7992 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" parent="Pviot" index="1"]
+stream = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+anims/Wave = SubResource( 1 )
