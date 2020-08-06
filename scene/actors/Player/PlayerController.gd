@@ -10,7 +10,7 @@ onready var weapon = $WeaponPviot/Weapon
 signal direction_changed(newDirection)
 
 func _ready():
-	pass
+	add_to_group("players")
 
 func _physics_process(delta):
 	_process_move(delta)

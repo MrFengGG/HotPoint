@@ -14,9 +14,6 @@ scale = Vector2( 0.926344, 0.958756 )
 script = ExtResource( 3 )
 speed = 100
 
-[node name="Sprite" parent="." index="0"]
-frame = 15
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 1 )
 __meta__ = {
