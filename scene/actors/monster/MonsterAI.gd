@@ -3,6 +3,7 @@ extends KinematicBody2D
 var aliveTime = 0
 
 export (float) var speed = 10
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
