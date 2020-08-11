@@ -1,7 +1,9 @@
 extends Node2D
 
+signal fire
+
 func triggerPress():
-    pass
+	pass
 
 func triggerRelease():
-    pass
+	pass

@@ -10,25 +10,25 @@ var bulletScene
 var remainBulletNum
 
 func _ready():
-    bulletScene = preload(currentBulletType)
+	bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
 
 var currentBulletNum = bulletVolume
 var reloadStartTime = 0
 
 func _process(delta):
-    if reloading:
-        reloadStarTime += delta
-        if reloadStarTime >= reloadTime:
-            reloadStarTime = 0
-            reload()
-            reloading = false
+	if reloading:
+		reloadStarTime += delta
+		if reloadStarTime >= reloadTime:
+			reloadStarTime = 0
+			reload()
+			reloading = false
 
 func reload():
-    remainBulletNum = bulletVolume
+	remainBulletNum = bulletVolume
 
 func applyBullet():
-    if remainBulletNum >= 0:
-        return bulletScene.instance()
+	if remainBulletNum >= 0:
+		return bulletScene.instance()
 
 
 

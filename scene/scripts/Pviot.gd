@@ -6,10 +6,9 @@ func _ready():
 	pass
 
 func updatePosition(newDirection):
-	if not weapon.isAttack || weapon.weaponType == 0:
-		#角度
-		rotation = newDirection.angle()
-		#反转
-		scale.y = -1 if newDirection.x < 0 else 1
-		#层级修改
-		show_behind_parent = newDirection.y < 0
+	#角度
+	rotation = newDirection.angle()
+	#反转
+	scale.y = -1 if newDirection.x < 0 else 1
+	#层级修改
+	show_behind_parent = newDirection.y < 0
