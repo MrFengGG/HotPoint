@@ -11,7 +11,7 @@ func _physics_process(delta):
 	knockback = move_and_slide(knockback)
 	
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _process(delta):
 	aliveTime += delta
