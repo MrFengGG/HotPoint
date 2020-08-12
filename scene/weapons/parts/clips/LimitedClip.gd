@@ -7,7 +7,7 @@ export var currentBulletType = "normal"
 var reloadStarTime = 0;
 var reloading = false
 var bulletScene
-var remainBulletNum
+var remainBulletNum = 1
 
 func _ready():
 	bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
