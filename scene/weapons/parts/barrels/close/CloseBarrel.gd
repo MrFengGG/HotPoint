@@ -7,5 +7,9 @@ func _ready():
 	sprite.hide()
 	
 func fire(bullet, weaponEffect):
+	fireIsOver = false
 	animationPlayer.play("attack")
+
+func onFireIsOver():
+	fireIsOver = true
 

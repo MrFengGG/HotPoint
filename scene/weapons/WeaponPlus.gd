@@ -15,4 +15,6 @@ func onFire(weaponEffect):
 	if bullet:
 		bullet = weaponEffect.effectBullet(bullet)
 		barrel.fire(bullet, weaponEffect)
-	
+
+func canMove():
+	return barrel.fireIsOver()
