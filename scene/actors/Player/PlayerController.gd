@@ -1,12 +1,20 @@
 extends KinematicBody2D
 
-export (int) var speed #速度
+export (int) var speed
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var weapon = $WeaponPviot/Weapon
 onready var weaponPviot = $WeaponPviot
+onready var container = $Container
+onready var toolBar = $ToolBar
+onready var equipmentBar = $EquipmentBar
+
+var itemFactory = ItemFactory.new()
+
+var mouseInContainer = false
+var currentItem = null
 
 signal direction_changed(newDirection)
 
@@ -35,7 +43,24 @@ func _process_move(delta):
 	move_and_slide(velocity)
 #处理攻击
 func _attact(delta):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
-		weapon.triggerPress()
-	else:
-		weapon.triggerRelease()
+	if weapon && !mouseInContainer:
+		if Input.is_mouse_button_pressed(BUTTON_LEFT):
+			weapon.triggerPress()
+		else:
+			weapon.triggerRelease()
+
+#处理工具栏选择
+func _switchWeapon(delta):
+	if Input.is_action_just_released():
+		item = toolBar.nextItem()
+		initItem(currentItem, item)
+
+#初始化选择的工具
+func initItem(sourceItem, targetItem):
+	itemFactory.recover(weapon, sourceItem)
+	currentItem = targetItem
+	weapon = itemFactory.create(targetItem)
+
+
+
+

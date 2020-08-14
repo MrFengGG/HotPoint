@@ -5,6 +5,9 @@ const HOUR_IN_DAY = 24
 const DAY_IN_MONTH = 30
 const MONTH_IN_YEAR = 12
 
+class_name Calender
+
+
 var minute = 0
 var hour = 0
 var day = 0
@@ -26,8 +29,8 @@ func tick():
 		hour_changed()
 
 func hour_changed():
-	emit_signal("hour_changed")
 	hour += 1
+	emit_signal("hour_changed", hour)
 	if hour == HOUR_IN_DAY:
 		hour = 0
 		day += 1
@@ -52,6 +55,9 @@ func month_changed():
 func year_changed():
 	emit_signal("year_changed")
 	year += 1
+
+func isNight():
+	return hour >= 1
 	
 	
 
