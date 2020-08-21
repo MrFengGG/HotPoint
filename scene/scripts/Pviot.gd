@@ -6,7 +6,7 @@ func _ready():
 	pass
 
 func updatePosition(newDirection):
-	if weapon.canMove():
+	if weapon && weapon.canMove():
 		#角度
 		rotation = newDirection.angle()
 		#反转

@@ -1,30 +1,39 @@
 extends Node2D
 
 
-export (int) var height
-export (int) var width
-export (float) weightHold
+var gridHeight = 40
+var gridWidth = 40
+var distance = 3
 
-export (string) var name
+class_name GridBar
+export (int) var height = 1
+export (int) var width = 1
+
+export (String) var localName
 export (float) var itemSize
 
-func _ready():
-    pass
+var items = []
+func _ready():	
+	for i in range(height):
+		var row = HBoxContainer.new()
+		row.
+		row.separation = 2
+		
 
 func nextItem():
-    pass
+	pass
 
 func switchItem(position):
-    pass
+	pass
 
 func chooseItem(index):
-    pass
+	pass
 
 func addItem(item):
-    pass
+	pass
 
 func removeItem(position):
-    pass
+	pass
 
 
 

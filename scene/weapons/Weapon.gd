@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name Weapon
 onready var trigger = $Trigger
 onready var clip = $Clip
 onready var barrel = $Barrel

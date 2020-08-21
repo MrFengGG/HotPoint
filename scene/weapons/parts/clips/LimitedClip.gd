@@ -1,4 +1,6 @@
-extends "res://scene/weapons/parts/clips/Clip.gd"
+extends Clip
+
+class_name LimitedClip
 
 export (float) var bulletVolume = 1
 export (float) var reloadTime = 1

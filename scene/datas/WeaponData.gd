@@ -1,0 +1,60 @@
+extends Reference
+
+enum WEAPONTYPE {SWORD, DAGGER, GUN}
+
+const weaponData = {
+	"w1":{
+		"uid":"w1",
+		"icon":"",
+		"desc":"杀猪刀也是刀",
+		"weight":"1.5",
+		"name":"杀猪刀",
+		"level":"1",
+		"itemType":"",
+		"stackable":false,
+		"maxStackNum":1,
+		"data":{
+			"triggerType":2,
+			"barrelType":1,
+			"barrelTexturePath":"",
+			"clipType":1,
+			"weaponType":WEAPONTYPE.SWORD
+		},
+	},
+	"w2":{
+		"uid":"w2",
+		"icon":"",
+		"desc":"运气好也许可以打死一头猪",
+		"weight":"0.5",
+		"name":"火绳枪",
+		"level":"1",
+		"itemType":"",
+		"stackable":false,
+		"maxStackNum":1,
+		"data":{
+			"triggerType":2,
+			"barrelType":1,
+			"barrelTexturePath":"",
+			"clipType":1,
+			"weaponType":WEAPONTYPE.GUN
+		},
+	},
+	"w3":{
+		"uid":"w3",
+		"icon":"",
+		"desc":"有总比没有好",
+		"weight":"2",
+		"name":"木枪",
+		"level":"1",
+		"itemType":"",
+		"stackable":false,
+		"maxStackNum":1,
+		"data":{
+			"triggerType":2,
+			"barrelType":1,
+			"barrelTexturePath":"",
+			"clipType":1,
+			"weaponType":WEAPONTYPE.DAGGER
+		},
+	}
+}

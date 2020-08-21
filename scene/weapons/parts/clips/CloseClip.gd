@@ -1,5 +1,6 @@
-extends "res://scene/weapons/parts/clips/Clip.gd"
+extends Clip
 
+class_name CloseClip
 var emptyBullet = Node.new()
 
 func applyBullet():

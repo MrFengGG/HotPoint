@@ -1,5 +1,6 @@
-extends "res://scene/weapons/parts/triggers/Trigger.gd"
+extends Trigger
 
+class_name IntervalTrigger
 export (float) var distance = 1
 
 var lastShootSpend = 0

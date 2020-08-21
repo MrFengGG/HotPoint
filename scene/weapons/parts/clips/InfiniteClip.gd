@@ -1,4 +1,6 @@
-extends "res://scene/weapons/parts/clips/Clip.gd"
+extends Clip
+
+class_name InfiniteClip
 
 export var currentBulletType = "normal"
 

@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/ui/Container.gd" type="Script" id=1]
+
+[node name="Container" type="GridContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+height = null
+width = null
+localName = null
+itemSize = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 110.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = 55
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+margin_left = 55.0
+margin_right = 55.0
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+margin_left = 110.0
+margin_right = 150.0
+margin_bottom = 40.0

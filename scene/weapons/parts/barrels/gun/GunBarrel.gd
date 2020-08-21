@@ -7,6 +7,7 @@ onready var audioPlayer = $AudioStreamPlayer
 var bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
 
 func _ready():
+	animationPlayer.playback_speed = speed
 	sprite.hide()
 	
 func fire(bullet, weaponEffect):

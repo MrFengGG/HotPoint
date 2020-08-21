@@ -1,7 +1,7 @@
 extends Node2D
 
-var  fireIsOver = true
-
+var fireIsOver = true
+export (float) var speed = 1
 func fire(bullet, weaponEffect):
 	pass
 
