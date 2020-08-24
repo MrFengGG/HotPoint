@@ -8,5 +8,3 @@ func _ready():
 
 func onHourChange(hour):
 	pass
-
-

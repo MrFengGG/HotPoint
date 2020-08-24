@@ -29,10 +29,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scene/weapons/parts/triggers/ContinuityTrigger.gd"
 }, {
-"base": "Node2D",
+"base": "Container",
 "class": "GridBar",
 "language": "GDScript",
-"path": "res://scene/ui/Container.gd"
+"path": "res://scene/ui/inventory/Inventory.gd"
 }, {
 "base": "Clip",
 "class": "InfiniteClip",
@@ -53,6 +53,11 @@ _global_script_classes=[ {
 "class": "ItemMeta",
 "language": "GDScript",
 "path": "res://scene/items/itemMeta.gd"
+}, {
+"base": "Control",
+"class": "ItemSlot",
+"language": "GDScript",
+"path": "res://scene/ui/inventory/ItemSlot.gd"
 }, {
 "base": "Clip",
 "class": "LimitedClip",
@@ -89,6 +94,7 @@ _global_script_class_icons={
 "IntervalTrigger": "",
 "ItemFactory": "",
 "ItemMeta": "",
+"ItemSlot": "",
 "LimitedClip": "",
 "Trigger": "",
 "Weapon": "",

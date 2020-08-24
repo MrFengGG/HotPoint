@@ -2,8 +2,12 @@
 
 [ext_resource path="res://scene/ui/inventory/Inventory.gd" type="Script" id=1]
 
-[node name="Container" type="VBoxContainer"]
+[node name="Inventory" type="PanelContainer"]
+margin_right = 184.0
+margin_bottom = 135.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 height = 10
 width = 10
-localName = "shit container"
