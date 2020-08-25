@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scene/ui/inventory/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://scene/ui/inventory/ItemContainer.gd" type="Script" id=1]
 
-[node name="Inventory" type="PanelContainer"]
+[node name="ItemContainer" type="PanelContainer"]
 margin_right = 184.0
 margin_bottom = 135.0
 script = ExtResource( 1 )
@@ -11,3 +11,4 @@ __meta__ = {
 }
 height = 10
 width = 10
+itemSize = 20.0
