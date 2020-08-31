@@ -4,7 +4,7 @@ var gridHeight = 40
 var gridWidth = 40
 var distance = 3
 var weaponData = load("res://scene/datas/WeaponData.gd").weaponData
-var toolTip = get_tree().root().getNode("ToolTip")
+var toolTip 
 class_name ItemContainer
 
 export (int) var height = 1
@@ -16,6 +16,7 @@ export (Vector2) var position
 var slots = []
 
 func _ready():
+	toolTip = get_node("../ToolTip")
 	var label = Label.new()
 	label.text = localName
 	add_child(label)
@@ -40,7 +41,7 @@ func _ready():
 
 func showToolTip(slot):
 	if slot.getItem():
-		var item = slot.getItem()
+		var item = slot.getItem().itemData
 		var position = get_global_mouse_position()
 		toolTip.showText(position, item.name, item.desc)
 
