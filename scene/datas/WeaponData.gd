@@ -5,7 +5,7 @@ enum WEAPONTYPE {SWORD, DAGGER, GUN}
 const weaponData = {
 	"w1":{
 		"uid":"w1",
-		"icon":"",
+		"icon":"res://assert/wave.png",
 		"desc":"杀猪刀也是刀",
 		"weight":"1.5",
 		"name":"杀猪刀",

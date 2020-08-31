@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scene/ui/inventory/ItemContainer.gd" type="Script" id=1]
 
-[node name="ItemContainer" type="PanelContainer"]
+[node name="ItemContainer" type="VBoxContainer"]
 margin_right = 184.0
 margin_bottom = 135.0
 script = ExtResource( 1 )

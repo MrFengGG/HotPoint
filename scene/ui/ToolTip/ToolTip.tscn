@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/ui/ToolTip/ToolTip.gd" type="Script" id=1]
+
+[node name="ToolTip" type="Panel"]
+margin_right = 164.0
+margin_bottom = 105.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 163.0
+margin_bottom = 103.0
+bbcode_enabled = true
+bbcode_text = "[color=blue]blue[/color]"
+text = "blue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
