@@ -1,21 +1,16 @@
-extends ColorRect
+extends Control
 
 class_name ItemSlot
+onready var textureRect = $TextureRect
 
-export (float) var width
-export (float) var height
 var item
+
 func _ready():
-	rect_size = Vector2(width, height)
+	pass # Replace with function body.
 
-func getItem():
+func get_item():
 	return item
-	
-func setItem(item):
-	if self.item:
-		self.item.queue_free()
-	self.item = Item.new(item)
-	add_child(self.item)
 
-
-
+func set_item(item):
+	if item:
+		textureRect.texture = load(item.icon)

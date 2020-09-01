@@ -1,0 +1,592 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scene/ui/inventory/ColorItemSlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/ui/inventory/SlotContainer.gd" type="Script" id=2]
+[ext_resource path="res://scene/ui/inventory/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://scene/ui/inventory/ToolTip.gd" type="Script" id=4]
+[ext_resource path="res://assert/fonts/chinese_serif.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 5 )
+
+[node name="Inventory" type="Control"]
+theme = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerPanel" type="Panel" parent="."]
+margin_left = 42.0
+margin_top = 22.0
+margin_right = 408.0
+margin_bottom = 344.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PlayerPanel"]
+margin_left = 21.0
+margin_top = 12.0
+margin_right = 82.0
+margin_bottom = 43.0
+text = "背包
+"
+
+[node name="Slots" type="GridContainer" parent="PlayerPanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -143.613
+margin_top = -286.372
+margin_right = 148.387
+margin_bottom = -42.3718
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorItemSlot" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot2" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_right = 90.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot3" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_right = 140.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot4" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_right = 190.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot5" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_right = 240.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot6" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_right = 290.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot7" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_top = 50.0
+margin_right = 40.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot8" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot9" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 140.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot10" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 50.0
+margin_right = 190.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot11" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 50.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot12" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 50.0
+margin_right = 290.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot13" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_top = 100.0
+margin_right = 40.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot14" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 90.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot15" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 140.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot16" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 100.0
+margin_right = 190.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot17" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = 240.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot18" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 100.0
+margin_right = 290.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot19" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_right = 40.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot20" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot21" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 150.0
+margin_right = 140.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot22" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 190.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot23" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot24" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 290.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot25" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_top = 200.0
+margin_right = 40.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot26" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 200.0
+margin_right = 90.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot27" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 140.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot28" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 200.0
+margin_right = 190.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot29" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 240.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot30" parent="PlayerPanel/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 200.0
+margin_right = 290.0
+margin_bottom = 240.0
+
+[node name="NextButton" type="Button" parent="PlayerPanel"]
+margin_left = 304.0
+margin_top = 284.0
+margin_right = 352.0
+margin_bottom = 314.0
+text = "next"
+
+[node name="Button" type="Button" parent="PlayerPanel"]
+margin_left = 6.0
+margin_top = 284.0
+margin_right = 56.0
+margin_bottom = 314.0
+text = "prev"
+
+[node name="ToolBar" type="Panel" parent="."]
+margin_left = 323.0
+margin_top = 533.0
+margin_right = 760.0
+margin_bottom = 581.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slots" type="GridContainer" parent="ToolBar"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -195.5
+margin_top = -44.0
+margin_right = 195.5
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 8
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorItemSlot" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot2" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_right = 90.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot3" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_right = 140.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot4" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_right = 190.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot5" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_right = 240.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot6" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_right = 290.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot7" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 300.0
+margin_right = 340.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot8" parent="ToolBar/Slots" instance=ExtResource( 1 )]
+margin_left = 350.0
+margin_right = 390.0
+margin_bottom = 40.0
+
+[node name="EquipmentBar" type="Panel" parent="."]
+margin_left = 960.0
+margin_top = 22.0
+margin_right = 1000.0
+margin_bottom = 458.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slots" type="GridContainer" parent="EquipmentBar"]
+margin_right = 40.0
+margin_bottom = 436.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorItemSlot" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot2" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 44.0
+margin_right = 40.0
+margin_bottom = 84.0
+
+[node name="ColorItemSlot3" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 88.0
+margin_right = 40.0
+margin_bottom = 128.0
+
+[node name="ColorItemSlot4" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 132.0
+margin_right = 40.0
+margin_bottom = 172.0
+
+[node name="ColorItemSlot5" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 176.0
+margin_right = 40.0
+margin_bottom = 216.0
+
+[node name="ColorItemSlot6" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 220.0
+margin_right = 40.0
+margin_bottom = 260.0
+
+[node name="ColorItemSlot7" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 264.0
+margin_right = 40.0
+margin_bottom = 304.0
+
+[node name="ColorItemSlot8" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 308.0
+margin_right = 40.0
+margin_bottom = 348.0
+
+[node name="ColorItemSlot9" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 352.0
+margin_right = 40.0
+margin_bottom = 392.0
+
+[node name="ColorItemSlot10" parent="EquipmentBar/Slots" instance=ExtResource( 1 )]
+margin_top = 396.0
+margin_right = 40.0
+margin_bottom = 436.0
+
+[node name="Store" type="Panel" parent="."]
+margin_left = 586.0
+margin_top = 22.0
+margin_right = 925.0
+margin_bottom = 344.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Store"]
+margin_left = 10.0
+margin_top = 12.0
+margin_right = 50.0
+margin_bottom = 36.0
+text = "仓库"
+
+[node name="Slots" type="GridContainer" parent="Store"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.0
+margin_top = -278.0
+margin_right = 145.0
+margin_bottom = -38.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorItemSlot" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot2" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_right = 90.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot3" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_right = 140.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot4" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_right = 190.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot5" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_right = 240.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot6" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_right = 290.0
+margin_bottom = 40.0
+
+[node name="ColorItemSlot7" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_top = 50.0
+margin_right = 40.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot8" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 90.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot9" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 140.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot10" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 50.0
+margin_right = 190.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot11" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 50.0
+margin_right = 240.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot12" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 50.0
+margin_right = 290.0
+margin_bottom = 90.0
+
+[node name="ColorItemSlot13" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_top = 100.0
+margin_right = 40.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot14" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 90.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot15" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 140.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot16" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 100.0
+margin_right = 190.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot17" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = 240.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot18" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 100.0
+margin_right = 290.0
+margin_bottom = 140.0
+
+[node name="ColorItemSlot19" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_right = 40.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot20" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 150.0
+margin_right = 90.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot21" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 150.0
+margin_right = 140.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot22" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 190.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot23" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 150.0
+margin_right = 240.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot24" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 150.0
+margin_right = 290.0
+margin_bottom = 190.0
+
+[node name="ColorItemSlot25" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_top = 200.0
+margin_right = 40.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot26" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 50.0
+margin_top = 200.0
+margin_right = 90.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot27" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 140.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot28" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 200.0
+margin_right = 190.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot29" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 240.0
+margin_bottom = 240.0
+
+[node name="ColorItemSlot30" parent="Store/Slots" instance=ExtResource( 1 )]
+margin_left = 250.0
+margin_top = 200.0
+margin_right = 290.0
+margin_bottom = 240.0
+
+[node name="ToolTip" type="Panel" parent="."]
+margin_right = 181.0
+margin_bottom = 129.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="ToolTip"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "随便啦"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="RichTextLabel" parent="ToolTip"]
+margin_top = 22.0
+margin_right = 181.0
+margin_bottom = 129.0
+text = "这是装备介绍装备介绍"

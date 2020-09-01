@@ -9,12 +9,6 @@ onready var weapon = $WeaponPviot/Weapon
 onready var weaponPviot = $WeaponPviot
 
 
-#背包
-onready var container = $Container
-#工具栏
-onready var toolBar = $ToolBar
-#装备栏
-onready var equipmentBar = $EquipmentBar
 
 var itemFactory = ItemFactory.new()
 
@@ -53,12 +47,6 @@ func _attact(delta):
 			weapon.triggerPress()
 		else:
 			weapon.triggerRelease()
-
-#处理工具栏选择
-func _switchWeapon(delta):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
-		var item = toolBar.nextItem()
-		initItem(currentItem, item)
 
 #初始化选择的工具
 func initItem(sourceItem, targetItem):

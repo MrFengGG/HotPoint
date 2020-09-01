@@ -1,14 +1,13 @@
-extends Node
+extends Control
 
 class_name Inventory
 
-var toolPannel
-var knapsack
-var equipmentBar
+onready var player_panel = $PlayerPanel
+onready var tool_bar = $ToolBar
+onready var equopment_bar = $EquipmentBar
+onready var store = $Store
 
-func _ready():
-	toolPannel = ItemContainer.new(Vector2(1,1),1, 10)
-	add_child(toolPannel)
+
 	
 	
 
