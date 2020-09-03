@@ -22,6 +22,11 @@ func add_item(item):
 	var item_slot = get_free_slot()
 	if item_slot:
 		item_slot.set_item(item)
+		
+func get_slot(index):
+	if slots.size() > index:
+		return slots[index]
+	return false
 
 func clear():
 	for i in slots:

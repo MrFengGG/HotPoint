@@ -1,7 +1,8 @@
 extends Reference
 
-enum WEAPON_TYPE {SWORD, DAGGER, GUN}
-enum ITEM_TYPE {WEAPON}
+enum WEAPON_TYPE {SWORD=1, DAGGER=2, GUN=3}
+enum ITEM_TYPE {WEAPON=1}
+
 const ITEM_DATAS = {
 	"w1":{
 		"uid":"w1",
@@ -15,8 +16,8 @@ const ITEM_DATAS = {
 		"data":{
 			"triggerType":2,
 			"barrelType":1,
-			"barrelTexturePath":"",
 			"clipType":1,
+			"barrelTexturePath":"res://assert/wave.png",
 			"weaponType":WEAPON_TYPE.SWORD
 		},
 	},
@@ -32,7 +33,7 @@ const ITEM_DATAS = {
 		"data":{
 			"triggerType":2,
 			"barrelType":1,
-			"barrelTexturePath":"",
+			"barrelTexturePath":"res://assert/pistol.png",
 			"clipType":1,
 			"weaponType":WEAPON_TYPE.GUN
 		},
@@ -49,9 +50,11 @@ const ITEM_DATAS = {
 		"data":{
 			"triggerType":2,
 			"barrelType":1,
-			"barrelTexturePath":"",
+			"barrelTexturePath":"res://assert/stab.png",
 			"clipType":1,
 			"weaponType":WEAPON_TYPE.DAGGER
 		},
 	}
 }
+
+class_name ItemData

@@ -1,17 +1,17 @@
 extends Reference
 
-var item_datas = load("res://scene/items/ItemData.gd").ITEM_DATAS
-var weaponFactory = WeaponFactory.new()
+var item_datas = ItemData.ITEM_DATAS
 
+var weaponFactory = WeaponFactory.new()
 class_name ItemFactory
 
-func create(item):
-	if item.itemType == 0:
-		return weaponFactory.createWeapon(item.data)
+func produce(item):
+	if item.item_type == ItemData.ITEM_TYPE.WEAPON:
+		return weaponFactory.createWeapon(item)
 	return null
 
 func recover(node, item):
-	if item.itemType == 0:
+	if item.itemType == item_datas.ITEM_TYPE.WEAPON:
 		weaponFactory.recoverWeapon(node,item)
 
 func query(code):

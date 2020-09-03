@@ -1,13 +1,13 @@
 extends Control
 
 var item_factory = ItemFactory.new()
-class_name Inventory
+
+signal change_tool_item(tool_node, item)
 
 onready var player_panel = $PlayerPanel
 onready var tool_bar = $ToolBar
 onready var equopment_bar = $EquipmentBar
 onready var store = $Store
-
 onready var tooltip = $ToolTip
 
 var holding_item
@@ -94,9 +94,34 @@ func _input(event : InputEvent):
 				holding_slot = null
 				holding_item = null
 func _process(delta):
-
 	if Input.is_action_just_released("ui_panel_toggle"):
 		toggle_panel()
+	if Input.is_action_pressed("ui_tool1"):
+		change_tool_item(0)
+	if Input.is_action_pressed("ui_tool2"):
+		change_tool_item(1)
+	if Input.is_action_pressed("ui_tool3"):
+		change_tool_item(2)
+	if Input.is_action_pressed("ui_tool4"):
+		change_tool_item(3)
+	if Input.is_action_pressed("ui_tool5"):
+		change_tool_item(4)
+	if Input.is_action_pressed("ui_tool6"):
+		change_tool_item(5)
+	if Input.is_action_pressed("ui_tool7"):
+		change_tool_item(6)
+	if Input.is_action_pressed("ui_tool8"):
+		change_tool_item(7)
+		
+func change_tool_item(index):
+	var slot = tool_bar.get_slot(index)
+	if slot:
+		if slot.get_item():
+			var tool_node = item_factory.produce(slot.get_item())
+			emit_signal("change_tool_item", tool_node, slot.get_item())
+		else:
+			emit_signal("change_tool_item", null)
+		
 	
 
 
