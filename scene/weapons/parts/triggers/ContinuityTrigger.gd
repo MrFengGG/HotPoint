@@ -1,4 +1,5 @@
 extends Trigger
+
 class_name ContinuityTrigger
 
 export (float) var distance = 1

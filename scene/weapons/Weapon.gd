@@ -2,6 +2,7 @@ extends Node2D
 
 var close_barrel_scene = preload("res://scene/weapons/parts/barrels/close/CloseBarrel.tscn")
 var gun_barrel_scene = preload("res://scene/weapons/parts/barrels/gun/GunBarrel.tscn")
+
 onready var trigger
 onready var clip
 onready var barrel
