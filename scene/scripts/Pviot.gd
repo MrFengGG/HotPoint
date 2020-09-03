@@ -1,12 +1,15 @@
 extends Node2D
 
-onready var weapon = $Weapon
+var weapon
 
 func _ready():
 	pass
 
 func set_weapon(weapon):
-	weapon = weapon
+	if self.weapon:
+		remove_child(self.weapon)
+	self.weapon = weapon
+	add_child(self.weapon)
 
 func updatePosition(newDirection):
 	if weapon && weapon.canMove():

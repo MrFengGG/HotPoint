@@ -6,14 +6,12 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var weaponPviot = $WeaponPviot
-onready var inventory = $Inventory
 
 var equit_weapon
 
 signal direction_changed(newDirection)
 
 func _ready():
-	inventory.connect("change_tool_item", self, "change_tool_item")
 	add_to_group("players")
 
 func _physics_process(delta):
@@ -51,7 +49,7 @@ func change_tool_item(tool_node, item):
 			if equit_weapon:
 				weaponPviot.remove_child(equit_weapon)
 			equit_weapon = tool_node
-			weaponPviot.add_child(equit_weapon)
+			weaponPviot.set_weapon(equit_weapon)
 		
 			
 

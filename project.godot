@@ -69,15 +69,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scene/weapons/parts/clips/LimitedClip.gd"
 }, {
-"base": "Node2D",
+"base": "Node",
 "class": "Trigger",
 "language": "GDScript",
 "path": "res://scene/weapons/parts/triggers/Trigger.gd"
-}, {
-"base": "Node2D",
-"class": "Weapon",
-"language": "GDScript",
-"path": "res://scene/weapons/Weapon.gd"
 }, {
 "base": "Reference",
 "class": "WeaponEffect",
@@ -103,7 +98,6 @@ _global_script_class_icons={
 "ItemSlot": "",
 "LimitedClip": "",
 "Trigger": "",
-"Weapon": "",
 "WeaponEffect": "",
 "WeaponFactory": ""
 }

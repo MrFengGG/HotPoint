@@ -14,6 +14,7 @@ const ITEM_DATAS = {
 		"stackable":false,
 		"maxStackNum":1,
 		"data":{
+			"weaponTexturePath":"res://assert/wave.png",
 			"triggerType":2,
 			"barrelType":1,
 			"clipType":1,

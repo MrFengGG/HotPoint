@@ -50,8 +50,8 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="CloseBarrel" type="Position2D"]
-rotation = 3.92699
+[node name="WaveBarrel" type="Position2D"]
+rotation = 0.785398
 scale = Vector2( 1, -1 )
 script = ExtResource( 2 )
 __meta__ = {

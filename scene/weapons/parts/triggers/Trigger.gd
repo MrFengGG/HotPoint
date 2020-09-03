@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 class_name Trigger
 
@@ -7,5 +7,5 @@ signal fire
 func trigger_press():
 	pass
 
-func trigger_release():
+func triggerRelease():
 	pass

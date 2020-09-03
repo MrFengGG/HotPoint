@@ -45,10 +45,8 @@ script = ExtResource( 2 )
 anims/fire = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -3.3674, -1.12247 )
 texture = ExtResource( 1 )
 hframes = 9
-frame = 8
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

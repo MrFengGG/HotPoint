@@ -1,35 +1,24 @@
 extends Node2D
 
-var close_barrel_scene = preload("res://scene/weapons/parts/barrels/close/CloseBarrel.tscn")
-var gun_barrel_scene = preload("res://scene/weapons/parts/barrels/gun/GunBarrel.tscn")
+var trigger
+var clip
 
-onready var trigger
-onready var clip
-onready var barrel
-
-class_name Weapon
+onready var barrel = $Barrel
 
 var item
 
 func _ready():
-	var data = item.item_data
+	var data = self.item.item_data
+	if data['weaponType'] == ItemData.WEAPON_TYPE.SWORD:
+		barrel.get_node("Sprite").texture = load(data['weaponTexturePath'])
 	#init trigger
 	if data['triggerType'] == 1:
 		self.trigger = ContinuityTrigger.new()
 	elif data['triggerType'] == 2:
 		self.trigger = IntervalTrigger.new()
+	self.trigger.connect("fire", self, "on_fire")
+	
 	add_child(self.trigger)
-
-	#init barrel
-	if data['barrelType'] == 1:
-		var barrel = close_barrel_scene.instance()
-		barrel.init(data['barrelTexturePath'])
-		self.barrel = barrel
-	elif data['barrelType'] == 2:
-		var barrel = gun_barrel_scene.instance()
-		barrel.spirite.texture = load(data['barrelTexturePath'])
-		self.barrel = barrel
-	add_child(self.barrel)
 	#init clip
 	if data['clipType'] == 1:
 		self.clip = CloseClip.new()
@@ -38,7 +27,6 @@ func _ready():
 	if data['clipType'] == 3:
 		self.clip = LimitedClip.new()
 	add_child(self.clip)
-
 func trigger_press():
 	trigger.trigger_press()
 
@@ -48,11 +36,11 @@ func trigger_release():
 func on_fire(weaponEffect):
 	var bullet = clip.apply_bullet()
 	if bullet:
-		bullet = weaponEffect.effectBullet(bullet)
+		bullet = weaponEffect.effect_bullet(bullet)
 		barrel.fire(bullet, weaponEffect)
 
 func canMove():
 	return barrel.fire_is_over()
 
-func _init(weapon_item):
+func init(weapon_item):
 	self.item = weapon_item
