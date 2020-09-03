@@ -7,13 +7,13 @@ export (float) var aliveTime = 1
 
 onready var hitBox = $HitBox
 
-var startTime = 0
+var start_time = 0
 
 func _ready():
 	pass # Replace with function body.
 func _physics_process(delta):
-	startTime += delta
-	if startTime >= aliveTime:
+	start_time += delta
+	if start_time >= aliveTime:
 		queue_free()
 	var velocity = direction * delta * speed
 	hitBox.knockback_vector = direction

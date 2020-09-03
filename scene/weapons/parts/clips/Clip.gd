@@ -1,5 +1,6 @@
 extends Node2D
 
 class_name Clip
-func applyBullet():
+
+func apply_bullet():
 	return null

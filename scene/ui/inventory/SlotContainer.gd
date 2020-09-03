@@ -1,6 +1,8 @@
 extends Control
 
 onready var container = $Slots
+onready var tooltip = get_node("../ToolTip")
+
 var slots = []
 
 func _ready():

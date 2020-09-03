@@ -4,9 +4,9 @@ class_name InfiniteClip
 
 export var currentBulletType = "normal"
 
-var bulletScene
+var bullet_scene
 func _ready():
-	bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
+	bullet_scene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
 
 func applyBullet():
-	return bulletScene.instance()
+	return bullet_scene.instance()

@@ -8,8 +8,8 @@ func _ready():
 
 func show_item(position, item):
 	self.set_position(position)
-	title.text = item.title
-	content.bbcode_text = item.desc
+	title.text = item.item_name
+	content.bbcode_text = item.item_desc
 	visible = true
 
 func hide_item():

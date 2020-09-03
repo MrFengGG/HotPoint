@@ -4,7 +4,6 @@ var target = null
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var players = get_tree().get_nodes_in_group("players")
 	if players.size() > 0:

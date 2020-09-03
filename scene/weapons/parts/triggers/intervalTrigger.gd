@@ -3,17 +3,17 @@ extends Trigger
 class_name IntervalTrigger
 export (float) var distance = 1
 
-var lastShootSpend = 0
-var triggerPressed = false
+var last_shoot_spend = 0
+var trigger_pressed = false
 
-func triggerPress():
-	if !triggerPressed && lastShootSpend >= distance:
-		lastShootSpend = 0
-		triggerPressed = true
+func trigger_press():
+	if !trigger_pressed && last_shoot_spend >= distance:
+		last_shoot_spend = 0
+		trigger_pressed = true
 		emit_signal("fire", WeaponEffect.new())
 
 func triggerRelease():
-	triggerPressed = false
+	trigger_pressed = false
 
 func _process(delta):
-	lastShootSpend += delta
+	last_shoot_spend += delta

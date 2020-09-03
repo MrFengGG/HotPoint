@@ -2,6 +2,6 @@ extends Reference
 
 class_name WeaponEffect
 
-func effectBullet(bullet):
+func effect_bullet(bullet):
 	pass
 	

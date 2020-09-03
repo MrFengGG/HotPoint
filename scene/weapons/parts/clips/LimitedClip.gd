@@ -14,13 +14,13 @@ var remainBulletNum = 1
 func _ready():
 	bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
 
-var currentBulletNum = bulletVolume
-var reloadStartTime = 0
+var current_bullet_num = bulletVolume
+var reload_start_time = 0
 
 func _process(delta):
 	if reloading:
-		reloadStarTime += delta
-		if reloadStarTime >= reloadTime:
+		reload_start_time += delta
+		if reload_start_time >= reloadTime:
 			reloadStarTime = 0
 			reload()
 			reloading = false

@@ -1,9 +1,9 @@
 extends Node2D
 
-var fireIsOver = true
+var fire_is_over = true
 export (float) var speed = 1
-func fire(bullet, weaponEffect):
+func fire(bullet, weapon_effect):
 	pass
 
-func fireIsOver():
-	return fireIsOver
+func fire_is_over():
+	return fire_is_over

@@ -1,21 +1,22 @@
 extends Node2D
 
 class_name Weapon
+
 onready var trigger = $Trigger
 onready var clip = $Clip
 onready var barrel = $Barrel
 
-func triggerPress():
-	trigger.triggerPress()
+func trigger_ress():
+	trigger.trigger_press()
 
-func triggerRelease():
-	trigger.triggerRelease()
+func trigger_elease():
+	trigger.trigger_release()
 
-func onFire(weaponEffect):
-	var bullet = clip.applyBullet()
+func on_fire(weaponEffect):
+	var bullet = clip.apply_bullet()
 	if bullet:
 		bullet = weaponEffect.effectBullet(bullet)
 		barrel.fire(bullet, weaponEffect)
 
 func canMove():
-	return barrel.fireIsOver()
+	return barrel.fire_is_over()

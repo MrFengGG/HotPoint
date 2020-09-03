@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="ItemContainer" type="TextureRect"]
+rect_min_size = Vector2( 40, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

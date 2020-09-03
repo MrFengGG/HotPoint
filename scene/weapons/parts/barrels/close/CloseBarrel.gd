@@ -9,10 +9,10 @@ func _ready():
 	sprite.hide()
 	
 func fire(bullet, weaponEffect):
-	fireIsOver = false
+	fire_is_over = false
 	audioPlayer.play()
 	animationPlayer.play("attack")
 
 func onFireIsOver():
-	fireIsOver = true
+	fire_is_over = true
 

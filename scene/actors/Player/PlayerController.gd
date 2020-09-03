@@ -8,12 +8,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var weapon = $WeaponPviot/Weapon
 onready var weaponPviot = $WeaponPviot
 
-
-
 var itemFactory = ItemFactory.new()
-
-var mouseInContainer = false
-var currentItem = null
 
 signal direction_changed(newDirection)
 
@@ -42,14 +37,9 @@ func _process_move(delta):
 	move_and_slide(velocity)
 #处理攻击
 func _attact(delta):
-	if weapon && !mouseInContainer:
+	if weapon:
 		if Input.is_mouse_button_pressed(BUTTON_LEFT):
-			weapon.triggerPress()
+			weapon.trigger_press()
 		else:
-			weapon.triggerRelease()
+			weapon.trigger_release()
 
-#初始化选择的工具
-func initItem(sourceItem, targetItem):
-	itemFactory.recover(weapon, sourceItem)
-	currentItem = targetItem
-	weapon = itemFactory.create(targetItem)

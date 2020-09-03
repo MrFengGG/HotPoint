@@ -1,6 +1,5 @@
 extends Reference
 
-
 var weaponScene = preload("res://scene/weapons/Weapon.tscn")
 
 var closeBarrelScene = preload("res://scene/weapons/parts/barrels/close/CloseBarrel.tscn")

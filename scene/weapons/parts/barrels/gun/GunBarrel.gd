@@ -4,17 +4,17 @@ onready var animationPlayer = $AnimationPlayer
 onready var sprite = $Sprite
 onready var audioPlayer = $AudioStreamPlayer
 
-var bulletScene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
+var bullet_scene = preload("res://scene/weapons/parts/bullets/Bullet.tscn")
 
 func _ready():
 	animationPlayer.playback_speed = speed
 	sprite.hide()
 	
-func fire(bullet, weaponEffect):
+func fire(bullet, weapon_effect):
 	animationPlayer.play("fire")
 	audioPlayer.play()
-	var bulletNode = bulletScene.instance()
-	bulletNode.direction = (get_global_mouse_position() - global_position).normalized()
-	bulletNode.position = global_position
-	bulletNode.rotation = bulletNode.direction.angle()
-	self.get_tree().get_root().add_child(bulletNode)
+	var bullet_node = bullet_scene.instance()
+	bullet_node.direction = (get_global_mouse_position() - global_position).normalized()
+	bullet_node.position = global_position
+	bullet_node.rotation = bullet_node.direction.angle()
+	self.get_tree().get_root().add_child(bullet_node)

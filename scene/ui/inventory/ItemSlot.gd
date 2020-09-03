@@ -1,7 +1,8 @@
 extends Control
 
 class_name ItemSlot
-onready var textureRect = $TextureRect
+
+onready var itemContainer = $ItemContainer
 
 var item
 
@@ -13,8 +14,16 @@ func get_item():
 
 func set_item(item):
 	if item:
-		textureRect.texture = load(item.icon)
-	item = item
+		itemContainer.texture = load(item.item_icon)
+	self.item = item
 
 func remove_item():
 	item = null
+
+func pick_item():
+	if item:
+		itemContainer.texture = null
+		var temp = item
+		item = null
+		return temp
+	return false

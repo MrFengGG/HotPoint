@@ -4,8 +4,8 @@ class_name Trigger
 
 signal fire
 
-func triggerPress():
+func trigger_press():
 	pass
 
-func triggerRelease():
+func trigger_release():
 	pass

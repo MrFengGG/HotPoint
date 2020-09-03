@@ -2,8 +2,7 @@ extends Reference
 
 enum WEAPON_TYPE {SWORD, DAGGER, GUN}
 enum ITEM_TYPE {WEAPON}
-
-const ITEM_DATA = {
+const ITEM_DATAS = {
 	"w1":{
 		"uid":"w1",
 		"icon":"res://assert/wave.png",
@@ -56,6 +55,3 @@ const ITEM_DATA = {
 		},
 	}
 }
-
-func query(code):
-	
