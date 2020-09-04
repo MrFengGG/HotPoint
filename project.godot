@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scene/weapons/parts/triggers/ContinuityTrigger.gd"
 }, {
+"base": "Node",
+"class": "GrowStage",
+"language": "GDScript",
+"path": "res://scene/plant/GrowStage.gd"
+}, {
 "base": "Clip",
 "class": "InfiniteClip",
 "language": "GDScript",
@@ -89,6 +94,7 @@ _global_script_class_icons={
 "Clip": "",
 "CloseClip": "",
 "ContinuityTrigger": "",
+"GrowStage": "",
 "InfiniteClip": "",
 "IntervalTrigger": "",
 "Item": "",

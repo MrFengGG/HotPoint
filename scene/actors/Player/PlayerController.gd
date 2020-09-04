@@ -4,6 +4,7 @@ export (int) var speed
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
+onready var sprite = $Sprite
 onready var animationState = animationTree.get("parameters/playback")
 onready var weaponPviot = $WeaponPviot
 
@@ -24,7 +25,6 @@ func _process_move(delta):
 	velocity.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	var direction = (get_global_mouse_position() - weaponPviot.global_position)
-
 	animationTree.set("parameters/Idle/blend_position", direction)
 	animationTree.set("parameters/Walk/blend_position", direction)
 	emit_signal("direction_changed", direction)
